@@ -1,4 +1,4 @@
-<template> App </template>
+<template> <div>App</div> </template>
 
 <script>
 export default {
