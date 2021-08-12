@@ -1,0 +1,45 @@
+// глобальные миксины
+@mixin pseudo {
+  content: '';
+  position: absolute;
+}
+
+@mixin gradient_text($gradient) {
+  background-image: $gradient;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+@mixin full_size {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@mixin reset_full_size {
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+}
+
+@mixin vertical_align {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+@mixin gorisontal_align {
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@mixin center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
