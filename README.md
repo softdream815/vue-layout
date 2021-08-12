@@ -71,6 +71,7 @@ yarn build
 
 - `.gitignore`
 - `.prettierignore`
+- `.gitattributes`
 - `.prettierrc.json`
 - `**.md`
 - `**.lock`
