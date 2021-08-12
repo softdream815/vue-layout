@@ -9,6 +9,7 @@ on:
       - .prettierrc.json
       - '**.md'
       - '**.lock'
+      - .prettierignore
 jobs:
   build:
     runs-on: ubuntu-latest

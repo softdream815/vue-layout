@@ -70,6 +70,7 @@ yarn build
 Список файлов коммиты в которые `action` игнорирует:
 
 - `.gitignore`
+- `.prettierignore`
 - `.prettierrc.json`
 - `**.md`
 - `**.lock`
