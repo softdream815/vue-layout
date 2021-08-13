@@ -1,7 +1,12 @@
 const fsp = require('fs').promises
+
+// https://www.npmjs.com/package/shelljs
 const shell = require('shelljs')
+
+// https://www.npmjs.com/package/consola
 const consola = require('consola')
 
+// https://www.npmjs.com/package/enquirer#-prompts
 const { prompt, Toggle, Input } = require('enquirer')
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -21,6 +26,12 @@ const dev = true
   // Удаляем команду init-project из package.json
   const packageJson = require('../package.json')
   delete packageJson.scripts['init-project']
+
+  const projectName = await new Input({
+    message: 'Введите название проекта',
+  }).run()
+
+  if (projectName) packageJson.name = projectName
 
   await fsp.writeFile('package.json', JSON.stringify(packageJson))
 
