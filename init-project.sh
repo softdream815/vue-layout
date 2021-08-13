@@ -16,7 +16,7 @@ echo "
 "
 
 # Удаляем информацию о репозитории проекта vue-project-layout
-rm -Rf .git;
+rm -Rf .git
 
 # Удаляем папку с документацией
 rm -Rf docs
