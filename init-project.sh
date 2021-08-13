@@ -12,13 +12,20 @@ touch README.md
 git init;
 git add . ;
 git commit -m "Init project";
-git branch -M main;
+
+git branch -M main; # Создаем ветку main
+git checkout -b dev; # Создаем ветку dev
+git checkout -b build; # Создаем ветку build
 
 # Если есть в параметрах ссылка на github репозитрий - инициализирует удаленный репозиторий  и пушим на github
 if [[ $1 ]]; then
-  git remote add origin $1
-  git push -u origin main
+  git remote add origin $1;
+  git push -u origin main;
+  git push -u origin dev;
+  git push -u origin build;
 fi
+
+git checkout dev
 
 # Ставим зависимости
 yarn;

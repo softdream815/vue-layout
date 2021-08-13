@@ -30,7 +30,7 @@ sh ./init-project.sh https://github.com/ilya-belik/vue-project-layout.git
 - Удаляет информацию о репозитории проекта и коммитах `vue-project-layout`
 - Удаляет папку с документацией
 - Очищает `README.md`
-- Инициализирует `git` c веткой `main` и коммитом `"Init project"`
+- Инициализирует `git` c ветками `main`, `dev`, `build` и коммитом `"Init project"`
 - Если есть в параметрах ссылка на `GitHub` репозитрий - инициализирует удаленный репозиторий и
   пушит на `GitHub`
 - Ставит зависимости
@@ -52,8 +52,6 @@ yarn serve
 yarn build
 ```
 
-**PS:** не забудьте удалить папку [./docs](./docs)
-
 <br />
 
 ### `Github Pages` и `Github Actions`
@@ -61,6 +59,7 @@ yarn build
 - **Создать репозиторий на `Github`**
 - **Создать в репозитории ветки `main` и `build`** Рекомендую создать ветку `dev` и заливать
   изменения в нее, а потом делать пул в main что бы не превысить бесплатный лимит github actions
+  Если проект ининциализировлся скриптом с удаленным репозиторием - этот шаг можно пропустить
 - **Перейти в раздел репозитория `Settings`** ![Settings](./docs/settings.png)
 - **В настройках выбрать раздел `Pages`** ![Pages](./docs/pages.png)
 - **В разделе `Source` выбрать ветку `build`** ![Source](./docs/build.png)
