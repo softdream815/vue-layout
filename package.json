@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "init-project": "sh ./init-project.sh"
+    "init-project": "sh init.sh"
   },
   "dependencies": {
     "core-js": "^3.6.5",
