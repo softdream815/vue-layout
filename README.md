@@ -101,3 +101,4 @@ yarn build
 - `.prettierrc.json`
 - `**.md`
 - `**.lock`
+- `init-project.sh`
