@@ -37,12 +37,10 @@ git clone https://github.com/ilya-belik/vue-project-layout.git
 yarn init-project
 ```
 
-После `yarn init-project` можно добавить ссылку на ваш репозиторий Github и скрипт зальет в нее
-инициализированные проект. Например:
+Что бы инициализировать удаленный репозиторий `GitHub` - вставьте ссылку на него
+(https://github.com/никнейм/ваш-проект.git) после вопроса выделенного на фото
 
-```bash
-yarn init-project https://github.com/ilya-belik/vue-project-layout.git
-```
+![](./docs/link-repo.png)
 
 Что делает скрипт:
 

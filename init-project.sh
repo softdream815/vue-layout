@@ -1,5 +1,3 @@
-BOLD=$(tput bold)
-NORMAL=$(tput sgr0)
 echo "
 ████─████─████───██─███─████─███
 █──█─█──█─█──█────█─█───█──█──█
@@ -33,21 +31,48 @@ git branch -M main
 git checkout -b dev
 git checkout -b build
 
-# Если есть в параметрах ссылка на github репозитрий - инициализирует удаленный репозиторий  и пушим на github
-if [[ $1 ]]; then
-  git remote add origin $1
+# Если вставить на этом этапе ссылку на github репозитрий - инициализируем удаленный репозиторий  и пушим на github
+echo "
 
-  # Заменить на цикл
-  # BRANCHES=("main" "dev" "build")
-  # for i in ${!BRANCHES[*]}
-  #   do
-  #       git push -u origin ${BRANCHES[$i]} 
-  #   done
-  # fi
+ℹ️ Что бы Инициализировать Удаленный Репозиторий - Вставьте Ссылку На Него и Нажмите Enter
 
-  git push -u origin main
-  git push -u origin dev
-  git push -u origin build
+ПРОПУСТИТЬ - нажмите Enter
+  
+"
+read githuRepoLink
+
+# Если вставить на этом этапе ссылку на github репозитрий - инициализируем удаленный репозиторий  и пушим на github
+echo '
+
+ℹ️ Что бы Инициализировать Удаленный Репозиторий - Вставьте Ссылку На Него и Нажмите Enter
+
+Для ОТМЕНЫ просто нажмите Enter
+  
+'
+read githuRepoLink
+
+if [[ $githuRepoLink ]]; then
+  git remote add origin $githuRepoLink
+  echo '✅ Удаленный репозиторий ининциализиронан
+  '
+  
+  read -p 'ℹ️ Вы хотите сделать PUSH данных в удаленный репозиторий?' gitPush
+  echo
+  if [[ $gitPush =~ ^[Yy]$ ]]
+  then
+    git push -u origin main
+    echo '✅ Запрос на PUSH в main выполнен
+    '
+
+    git push -u origin dev
+    echo '✅ Запрос на PUSH в dev выполнен
+    '
+
+    git push -u origin build
+    echo '✅ Запрос на PUSH в build выполнен
+    '
+
+  fi
 fi
 
 git checkout dev
