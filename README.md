@@ -10,11 +10,33 @@
 git clone https://github.com/ilya-belik/vue-project-layout.git
 ```
 
-- **Установить зависимости:**
+<br />
+
+- **Запускаем скрипт для инициализации проекта:**
 
 ```bash
-yarn install
+sh ./init-project.sh
 ```
+
+После `sh ./init-project.sh` можно добавить ссылку на ваш репозиторий Github и скрипт зальет в нее
+инициализированные проект. Например:
+
+```bash
+sh ./init-project.sh https://github.com/ilya-belik/vue-project-layout.git
+```
+
+Что делает скрипт:
+
+- Удаляет информацию о репозитории проекта и коммитах `vue-project-layout`
+- Удаляет папку с документацией
+- Очищает `README.md`
+- Инициализирует `git` c веткой `main` и коммитом `"Init project"`
+- Если есть в параметрах ссылка на `GitHub` репозитрий - инициализирует удаленный репозиторий и
+  пушит на `GitHub`
+- Ставит зависимости
+- Удаляет сам себя
+
+<br />
 
 - **Запустить проект:**
 
@@ -22,13 +44,17 @@ yarn install
 yarn serve
 ```
 
-- **Билдить так:**
+<br />
+
+- **Билдит локально так:**
 
 ```bash
 yarn build
 ```
 
 **PS:** не забудьте удалить папку [./docs](./docs)
+
+<br />
 
 ### `Github Pages` и `Github Actions`
 
