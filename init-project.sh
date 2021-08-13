@@ -53,7 +53,7 @@ fi
 git checkout dev
 
 # Ставим зависимости
-yarn;
+yarn
 
 # Удаляем файл инициализации (этот)
-rm -f init-project.sh;
+rm -f init-project.sh

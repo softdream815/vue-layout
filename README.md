@@ -15,14 +15,14 @@ git clone https://github.com/ilya-belik/vue-project-layout.git
 - **Запускаем скрипт для инициализации проекта:**
 
 ```bash
-sh ./init-project.sh
+yarn init-project
 ```
 
-После `sh ./init-project.sh` можно добавить ссылку на ваш репозиторий Github и скрипт зальет в нее
+После `yarn init-project` можно добавить ссылку на ваш репозиторий Github и скрипт зальет в нее
 инициализированные проект. Например:
 
 ```bash
-sh ./init-project.sh https://github.com/ilya-belik/vue-project-layout.git
+yarn init-project https://github.com/ilya-belik/vue-project-layout.git
 ```
 
 Что делает скрипт:
