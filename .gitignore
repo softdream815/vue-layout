@@ -23,5 +23,5 @@ pnpm-debug.log*
 *.sw?
 
 yarn.lock
-init.sh
-/.init
+#temp init.sh
+#temp /.init

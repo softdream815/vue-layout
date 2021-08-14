@@ -23,10 +23,15 @@ const dev = true
   shell.exec('rm README.md')
   shell.exec('touch README.md')
 
+  // Удаляем комментарии #temp из .gitignore
+  const gitignore = await fsp.readFile('.gitignore', 'utf8')
+  await fsp.writeFile('.gitignore', gitignore.replace(/#temp /g, ''))
+
   // Удаляем команду init-project из package.json
   const packageJson = require('../package.json')
   delete packageJson.scripts['init-project']
 
+  // Спрашиваем у юзера информацию о проекте
   const projectName = await new Input({
     message: 'Введите название проекта',
   }).run()
